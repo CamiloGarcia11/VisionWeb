@@ -25,12 +25,19 @@ const { title, description = "Vision Web - Creamos páginas web profesionales qu
     <!-- Theme Initialization script to avoid Flash of Dark Mode (FOUC) -->
     <script is:inline>
       (function() {
-        const savedTheme = localStorage.getItem('theme');
-        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        if (savedTheme === 'light' || (!savedTheme && !systemPrefersDark)) {
-          document.documentElement.classList.add('light');
-        } else {
-          document.documentElement.classList.remove('light');
+        try {
+          const savedTheme = localStorage.getItem('theme');
+          const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (savedTheme === 'light' || (!savedTheme && !systemPrefersDark)) {
+            document.documentElement.classList.add('light');
+          } else {
+            document.documentElement.classList.remove('light');
+          }
+        } catch (e) {
+          const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (!systemPrefersDark) {
+            document.documentElement.classList.add('light');
+          }
         }
       })();
     </script>
@@ -487,42 +494,54 @@ const { title, description = "Vision Web - Creamos páginas web profesionales qu
     <!-- ==================== SCRIPTS ==================== -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <script is:inline>
-      // Mobile menu toggle & Theme toggle
-      function initNavbar() {
-        const mobileToggle = document.getElementById('mobile-menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-        if (mobileToggle && mobileMenu) {
-          mobileToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-          });
-        }
+      // Initialize theme and menu listeners globally on document once
+      // This works perfectly with Astro ClientRouter and prevents double-binding/multiple listeners!
+      if (!window.hasGlobalListeners) {
+        window.hasGlobalListeners = true;
         
-        // Initialize theme buttons listeners
-        const toggleBtn = document.getElementById('theme-toggle');
-        const toggleBtnMobile = document.getElementById('theme-toggle-mobile');
-        
-        const handleToggle = () => {
-          const isLight = document.documentElement.classList.toggle('light');
-          localStorage.setItem('theme', isLight ? 'light' : 'dark');
-        };
-        
-        if (toggleBtn) {
-          toggleBtn.removeEventListener('click', handleToggle);
-          toggleBtn.addEventListener('click', handleToggle);
-        }
-        if (toggleBtnMobile) {
-          toggleBtnMobile.removeEventListener('click', handleToggle);
-          toggleBtnMobile.addEventListener('click', handleToggle);
-        }
+        document.addEventListener('click', (e) => {
+          // Theme toggle handler
+          const toggleBtn = e.target.closest('#theme-toggle') || e.target.closest('#theme-toggle-mobile');
+          if (toggleBtn) {
+            const isLight = document.documentElement.classList.toggle('light');
+            try {
+              localStorage.setItem('theme', isLight ? 'light' : 'dark');
+            } catch (err) {}
+            return;
+          }
 
-        if (window.lucide) {
-          window.lucide.createIcons();
-        }
+          // Mobile menu toggle handler
+          const mobileToggle = e.target.closest('#mobile-menu-toggle');
+          if (mobileToggle) {
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenu) {
+              mobileMenu.classList.toggle('hidden');
+            }
+            return;
+          }
+
+          // Close mobile menu when clicking any nav link inside it
+          const navLink = e.target.closest('#mobile-menu a');
+          if (navLink) {
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenu) {
+              mobileMenu.classList.add('hidden');
+            }
+          }
+        });
       }
 
-      // Initialize on load and on page navigation (Astro View Transitions)
-      initNavbar();
-      document.addEventListener('astro:page-load', initNavbar);
+      // Initialize icons on load and page transition
+      function initIcons() {
+        if (window.lucide) {
+          window.lucide.createIcons();
+        } else {
+          // If script is deferred, check again in 50ms
+          setTimeout(initIcons, 50);
+        }
+      }
+      initIcons();
+      document.addEventListener('astro:page-load', initIcons);
     </script>
   </body>
 </html>
