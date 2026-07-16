@@ -90,7 +90,7 @@ export default function PricingCalculator() {
           {/* Project Type */}
           <div>
             <label className="text-xs font-bold text-white/60 uppercase tracking-wider block mb-3">1. Tipo de Proyecto</label>
-            <div className="grid grid-cols-2 gap-3">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {PROJECT_TYPES.map(type => (
                 <button
                   key={type.id}
