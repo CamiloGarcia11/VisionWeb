@@ -1,0 +1,255 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Nosotros | Vision Web" description="Conoce a Vision Web: una agencia de diseño y desarrollo web que crea páginas que conectan negocios con el mundo digital. Diseño estratégico, tecnología moderna y resultados reales.">
+  <!-- ==================== PAGE HEADER ==================== -->
+  <section class="hero-gradient py-20 md:py-28 relative overflow-hidden">
+    <div class="absolute inset-0 dot-pattern opacity-30"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+
+    <div class="relative z-10 mx-auto max-w-6xl px-6 text-center animate-fade-in-up">
+      <h1 class="text-4xl md:text-6xl font-black text-white tracking-tight mb-6">
+        Nuestra <span class="text-[#2563EB]">Identidad</span>
+      </h1>
+      <p class="text-white/50 max-w-2xl mx-auto text-base md:text-lg">
+        Conectamos tu marca con el mundo digital mediante un enfoque que fusiona visión y tecnología.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==================== ABOUT SECTION ==================== -->
+  <section class="relative py-20 bg-[#0D0D0D]">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- Left Column: Large SVG Logo with Animated Glow -->
+        <div class="flex justify-center reveal">
+          <div class="relative group">
+            <!-- Glow background -->
+            <div class="absolute inset-0 bg-[#2563EB]/15 filter blur-3xl group-hover:bg-[#2563EB]/25 transition-colors duration-500 logo-glow"></div>
+            
+            <svg width="280" height="210" viewBox="0 0 160 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="relative z-10 drop-shadow-[0_0_35px_rgba(37,99,235,0.25)]">
+              <!-- V (currentColor) -->
+              <path d="M 10 15 L 25 15 L 48 80 L 71 15 L 86 15 L 55 105 L 41 105 Z" fill="currentColor" />
+              <!-- W (Blue #2563EB) -->
+              <path d="M 56 15 L 71 15 L 83 60 L 95 15 L 110 15 L 122 60 L 134 15 L 149 15 L 130 105 L 115 105 L 100 50 L 85 105 L 70 105 Z" fill="#2563EB" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Right Column: Text content -->
+        <div class="space-y-6 reveal">
+          <h2 class="text-3xl font-extrabold text-white">¿Quiénes Somos?</h2>
+          <p class="text-white/55 text-sm md:text-base leading-relaxed">
+            <strong class="text-white">Vision Web</strong> nace con una misión clara: crear páginas web que no solo se vean bien, sino que generen resultados reales para tu negocio.
+          </p>
+          <p class="text-white/55 text-sm md:text-base leading-relaxed">
+            Combinamos visión estratégica, tecnología moderna y diseño de alto impacto para construir experiencias digitales consistentes que conecten a tu marca con más clientes en todo el mundo.
+          </p>
+          <p class="text-white/55 text-sm md:text-base leading-relaxed">
+            Somos más que desarrolladores web. Somos tus aliados estratégicos para el diseño y escalamiento de tu negocio en entornos digitales.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONCEPT SECTION ==================== -->
+  <section class="relative py-24 bg-[#1F1F1F]">
+    <div class="absolute inset-0 grid-pattern opacity-30"></div>
+    <div class="relative z-10 mx-auto max-w-6xl px-6">
+      <div class="text-center mb-16 reveal">
+        <h2 class="text-3xl md:text-5xl font-black text-white">Nuestro Concepto</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center reveal">
+        <!-- V - Visión -->
+        <div class="glass-card rounded-2xl p-8 border border-white/5">
+          <div class="w-16 h-16 rounded-full bg-[#2563EB]/10 flex items-center justify-center mx-auto mb-6">
+            <span class="text-3xl font-black text-white">V</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">VISIÓN</h3>
+          <p class="text-[#2563EB] text-xs font-semibold uppercase tracking-wider mb-4">Enfoque y Estrategia</p>
+          <p class="text-white/45 text-xs md:text-sm leading-relaxed">Analizamos el mercado y proyectamos soluciones digitales que aporten valor a largo plazo.</p>
+        </div>
+
+        <!-- W - Web -->
+        <div class="glass-card rounded-2xl p-8 border border-white/5">
+          <div class="w-16 h-16 rounded-full bg-[#2563EB]/10 flex items-center justify-center mx-auto mb-6">
+            <span class="text-3xl font-black text-[#2563EB]">W</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">WEB</h3>
+          <p class="text-[#2563EB] text-xs font-semibold uppercase tracking-wider mb-4">Tecnología y Desarrollo</p>
+          <p class="text-white/45 text-xs md:text-sm leading-relaxed">Escribimos código ágil utilizando las mejores herramientas del desarrollo frontend.</p>
+        </div>
+
+        <!-- + Laptop -->
+        <div class="glass-card rounded-2xl p-8 border border-white/5">
+          <div class="w-16 h-16 rounded-full bg-[#2563EB]/10 flex items-center justify-center mx-auto mb-6">
+            <i data-lucide="laptop" class="w-8 h-8 text-[#2563EB]"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">CONEXIÓN</h3>
+          <p class="text-[#2563EB] text-xs font-semibold uppercase tracking-wider mb-4">El Mundo Digital</p>
+          <p class="text-white/45 text-xs md:text-sm leading-relaxed">Conectamos tu negocio con clientes potenciales eliminando barreras geográficas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== VALUES SECTION ==================== -->
+  <section class="relative py-20 bg-[#0D0D0D]">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="text-center mb-16 reveal">
+        <h2 class="text-3xl md:text-5xl font-black text-white">Nuestros Valores</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 reveal">
+        <!-- Value 1 -->
+        <div class="glass-card rounded-2xl p-6 border border-white/5 flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-[#2563EB]/10 flex items-center justify-center mb-5">
+              <i data-lucide="palette" class="w-5 h-5 text-[#2563EB]"></i>
+            </div>
+            <h4 class="font-bold text-white mb-2">Diseño que impacta</h4>
+            <p class="text-white/40 text-xs leading-relaxed">Cada pixel tiene un propósito. Diseñamos interfaces visualmente premium que cautivan.</p>
+          </div>
+        </div>
+
+        <!-- Value 2 -->
+        <div class="glass-card rounded-2xl p-6 border border-white/5 flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-[#2563EB]/10 flex items-center justify-center mb-5">
+              <i data-lucide="code-2" class="w-5 h-5 text-[#2563EB]"></i>
+            </div>
+            <h4 class="font-bold text-white mb-2">Tecnología que funciona</h4>
+            <p class="text-white/40 text-xs leading-relaxed">Código limpio, rendimiento optimizado y las mejores prácticas del desarrollo moderno.</p>
+          </div>
+        </div>
+
+        <!-- Value 3 -->
+        <div class="glass-card rounded-2xl p-6 border border-white/5 flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-[#2563EB]/10 flex items-center justify-center mb-5">
+              <i data-lucide="trending-up" class="w-5 h-5 text-[#2563EB]"></i>
+            </div>
+            <h4 class="font-bold text-white mb-2">Resultados que crecen</h4>
+            <p class="text-white/40 text-xs leading-relaxed">Medimos y optimizamos el embudo de conversión para asegurar el retorno de inversión.</p>
+          </div>
+        </div>
+
+        <!-- Value 4 -->
+        <div class="glass-card rounded-2xl p-6 border border-white/5 flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-[#2563EB]/10 flex items-center justify-center mb-5">
+              <i data-lucide="users" class="w-5 h-5 text-[#2563EB]"></i>
+            </div>
+            <h4 class="font-bold text-white mb-2">Acompañamiento real</h4>
+            <p class="text-white/40 text-xs leading-relaxed">Te acompañamos antes, durante y después del lanzamiento del proyecto en la web.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ==================== CTA SECTION ==================== -->
+  <section class="relative py-24 bg-[#0D0D0D] overflow-hidden">
+    <div class="relative z-10 mx-auto max-w-4xl px-6 text-center reveal">
+      <div class="glass-card rounded-3xl p-10 md:p-16">
+        <h2 class="text-2xl md:text-4xl font-black tracking-tight mb-6">
+          ¿Listo para conectar tu negocio <span class="text-[#2563EB]">con el mundo</span>?
+        </h2>
+        <p class="text-white/50 text-sm md:text-base max-w-xl mx-auto mb-8">
+          Hablemos sobre tu proyecto. Juntos crearemos la presencia digital que tu negocio merece.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/contacto" class="inline-flex items-center justify-center gap-2 bg-[#2563EB] hover:bg-blue-700 text-white font-bold px-8 py-3.5 rounded-xl text-xs transition-all duration-300">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            Contáctanos ahora
+          </a>
+          <a href="/proyectos" class="inline-flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 text-white font-bold px-8 py-3.5 rounded-xl text-xs transition-all duration-300">
+            <i data-lucide="folder-open" class="w-4 h-4"></i>
+            Ver proyectos
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* Header styling */
+  .hero-gradient {
+    background: linear-gradient(135deg, #0D0D0D 0%, #1F1F1F 40%, #0D0D0D 70%, #0a1628 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-gradient::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 30% 40%, rgba(37, 99, 235, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 70% 60%, rgba(37, 99, 235, 0.05) 0%, transparent 50%);
+    animation: subtle-pulse 8s ease-in-out infinite alternate;
+  }
+  @keyframes subtle-pulse {
+    0% { opacity: 0.5; transform: scale(1); }
+    100% { opacity: 1; transform: scale(1.05); }
+  }
+
+  /* Logo glow pulse */
+  @keyframes glow-pulse {
+    0%, 100% { filter: drop-shadow(0 0 20px rgba(37, 99, 235, 0.3)); }
+    50% { filter: drop-shadow(0 0 40px rgba(37, 99, 235, 0.6)); }
+  }
+  .logo-glow {
+    animation: glow-pulse 3s ease-in-out infinite;
+  }
+
+  /* Glassmorphism card styles */
+  .glass-card {
+    background: rgba(31, 31, 31, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .glass-card:hover {
+    background: rgba(31, 31, 31, 0.8);
+    border-color: rgba(37, 99, 235, 0.3);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 30px rgba(37, 99, 235, 0.1);
+  }
+
+  /* Fade-in */
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+</style>
+
+<script is:inline>
+  function initReveal() {
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    reveals.forEach(el => observer.observe(el));
+  }
+  initReveal();
+  document.addEventListener('astro:page-load', initReveal);
+</script>

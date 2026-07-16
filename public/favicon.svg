@@ -1,0 +1,12 @@
+<svg viewBox="0 0 160 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    path.v-stem { fill: #0D0D0D; }
+    @media (prefers-color-scheme: dark) {
+      path.v-stem { fill: #FFFFFF; }
+    }
+  </style>
+  <g transform="translate(5, 10)">
+    <path class="v-stem" d="M 10 15 L 25 15 L 48 80 L 71 15 L 86 15 L 55 105 L 41 105 Z" />
+    <path d="M 56 15 L 71 15 L 83 60 L 95 15 L 110 15 L 122 60 L 134 15 L 149 15 L 130 105 L 115 105 L 100 50 L 85 105 L 70 105 Z" fill="#2563EB" />
+  </g>
+</svg>
