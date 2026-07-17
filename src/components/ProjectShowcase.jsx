@@ -59,7 +59,7 @@ const PROJECTS = [
   },
   {
     id: 5,
-    title: 'Sus Finanzas',
+    title: 'Williams Cruz',
     slug: 'sus-finanzas',
     description: 'Plataforma web para asesoría financiera e hipotecaria. Integra un simulador interactivo de ahorro y cotizaciones de crédito de vivienda en tiempo real.',
     category: 'finanzas',
