@@ -56,6 +56,20 @@ const PROJECTS = [
     icon: '📄',
     image: null,
     imgClass: 'project-img-4'
+  },
+  {
+    id: 5,
+    title: 'Sus Finanzas',
+    slug: 'sus-finanzas',
+    description: 'Plataforma web para asesoría financiera e hipotecaria. Integra un simulador interactivo de ahorro y cotizaciones de crédito de vivienda en tiempo real.',
+    category: 'finanzas',
+    categoryName: 'Finanzas & Consultoría',
+    tags: ['Finanzas', 'Simulador', 'Astro', 'UI/UX'],
+    link: 'https://susfinanzasco.vercel.app/',
+    isPrivate: false,
+    icon: '📊',
+    image: '/assets/projects/susfinanzas.png',
+    imgClass: 'project-img-5'
   }
 ];
 
@@ -64,6 +78,7 @@ const CATEGORIES = [
   { id: 'saas', name: 'SaaS / ERP' },
   { id: 'ecommerce', name: 'E-commerce' },
   { id: 'detailing', name: 'Estética' },
+  { id: 'finanzas', name: 'Finanzas' },
   { id: 'gubernamental', name: 'Gubernamental' }
 ];
 

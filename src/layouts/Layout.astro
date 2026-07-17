@@ -494,13 +494,11 @@ const { title, description = "Vision Web - Creamos páginas web profesionales qu
     <!-- ==================== SCRIPTS ==================== -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <script is:inline>
-      // Initialize theme and menu listeners globally on document once
-      // This works perfectly with Astro ClientRouter and prevents double-binding/multiple listeners!
+      // Navigation and theme controls (delegated to avoid router duplication)
       if (!window.hasGlobalListeners) {
         window.hasGlobalListeners = true;
         
         document.addEventListener('click', (e) => {
-          // Theme toggle handler
           const toggleBtn = e.target.closest('#theme-toggle') || e.target.closest('#theme-toggle-mobile');
           if (toggleBtn) {
             const isLight = document.documentElement.classList.toggle('light');
@@ -510,7 +508,6 @@ const { title, description = "Vision Web - Creamos páginas web profesionales qu
             return;
           }
 
-          // Mobile menu toggle handler
           const mobileToggle = e.target.closest('#mobile-menu-toggle');
           if (mobileToggle) {
             const mobileMenu = document.getElementById('mobile-menu');
@@ -520,7 +517,6 @@ const { title, description = "Vision Web - Creamos páginas web profesionales qu
             return;
           }
 
-          // Close mobile menu when clicking any nav link inside it
           const navLink = e.target.closest('#mobile-menu a');
           if (navLink) {
             const mobileMenu = document.getElementById('mobile-menu');
@@ -531,12 +527,10 @@ const { title, description = "Vision Web - Creamos páginas web profesionales qu
         });
       }
 
-      // Initialize icons on load and page transition
       function initIcons() {
         if (window.lucide) {
           window.lucide.createIcons();
         } else {
-          // If script is deferred, check again in 50ms
           setTimeout(initIcons, 50);
         }
       }
