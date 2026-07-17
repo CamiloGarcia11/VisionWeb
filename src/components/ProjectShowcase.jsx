@@ -65,7 +65,7 @@ const PROJECTS = [
     category: 'finanzas',
     categoryName: 'Finanzas & Consultoría',
     tags: ['Finanzas', 'Simulador', 'Astro', 'UI/UX'],
-    link: 'https://susfinanzasco.vercel.app/',
+    link: 'https://williamscruzco.vercel.app/',
     isPrivate: false,
     icon: '📊',
     image: '/assets/projects/susfinanzas.png',
