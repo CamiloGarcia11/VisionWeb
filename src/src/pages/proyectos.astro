@@ -1,0 +1,186 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProjectShowcase from '../components/ProjectShowcase.jsx';
+---
+
+<Layout title="Proyectos | Vision Web" description="Conoce los proyectos de Vision Web. Portafolios, e-commerce, landing pages y sistemas institucionales diseñados para conectar tu negocio con el mundo.">
+  <!-- ===================== PAGE HEADER ===================== -->
+  <section class="hero-gradient py-20 md:py-28 relative overflow-hidden">
+    <div class="absolute inset-0 dot-pattern opacity-30"></div>
+    
+    <div class="relative z-10 mx-auto max-w-6xl px-6 text-center animate-fade-in-up">
+      <h1 class="text-4xl md:text-6xl font-black text-white tracking-tight mb-6">
+        Nuestros <span class="text-[#2563EB]">Proyectos</span>
+      </h1>
+      <p class="text-white/50 max-w-2xl mx-auto text-base md:text-lg">
+        Más que diseño, creamos conexiones. Páginas web que conectan tu negocio con el mundo.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===================== PROJECTS INTERACTIVE SHOWCASE ===================== -->
+  <section class="relative py-16 md:py-24 bg-[#0D0D0D]">
+    <div class="mx-auto max-w-6xl px-6">
+      {/* We load the React interactive project search/filter component */}
+      <ProjectShowcase client:load />
+    </div>
+  </section>
+
+  <!-- ===================== STATS SECTION ===================== -->
+  <section class="relative py-20 md:py-28 overflow-hidden bg-[#1F1F1F]">
+    <div class="absolute inset-0 grid-pattern opacity-20"></div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#2563EB]/5 rounded-full blur-[100px] pointer-events-none"></div>
+
+    <div class="relative mx-auto max-w-6xl px-6">
+      <!-- Heading -->
+      <div class="text-center mb-16 reveal">
+        <h2 class="text-2xl md:text-4xl font-extrabold text-white mb-4">
+          Ideas + Estrategia + Tecnología = <span class="text-[#2563EB]">Resultados</span>
+        </h2>
+        <p class="text-white/50 max-w-xl mx-auto text-sm md:text-base">Cada número representa una conexión real con nuestra comunidad y el compromiso de seguir creciendo juntos.</p>
+      </div>
+
+      <!-- Stats Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+        <!-- Stat 1 -->
+        <div class="stat-card bg-[#0D0D0D] border border-white/5 rounded-2xl p-8 text-center transition-all duration-500 hover:border-[#2563EB]/30 reveal">
+          <div class="w-12 h-12 rounded-xl bg-[#2563EB]/10 flex items-center justify-center mx-auto mb-4">
+            <i data-lucide="file-text" class="w-6 h-6 text-[#2563EB]"></i>
+          </div>
+          <p class="text-4xl md:text-5xl font-extrabold text-white mb-2">32<span class="text-[#2563EB]">+</span></p>
+          <p class="text-xs text-white/50 font-medium uppercase tracking-wider">Publicaciones</p>
+        </div>
+
+        <!-- Stat 2 -->
+        <div class="stat-card bg-[#0D0D0D] border border-white/5 rounded-2xl p-8 text-center transition-all duration-500 hover:border-[#2563EB]/30 reveal" style="transition-delay: 0.1s;">
+          <div class="w-12 h-12 rounded-xl bg-[#2563EB]/10 flex items-center justify-center mx-auto mb-4">
+            <i data-lucide="users" class="w-6 h-6 text-[#2563EB]"></i>
+          </div>
+          <p class="text-4xl md:text-5xl font-extrabold text-white mb-2">1.256</p>
+          <p class="text-xs text-white/50 font-medium uppercase tracking-wider">Seguidores</p>
+        </div>
+
+        <!-- Stat 3 -->
+        <div class="stat-card bg-[#0D0D0D] border border-white/5 rounded-2xl p-8 text-center transition-all duration-500 hover:border-[#2563EB]/30 reveal" style="transition-delay: 0.2s;">
+          <div class="w-12 h-12 rounded-xl bg-[#2563EB]/10 flex items-center justify-center mx-auto mb-4">
+            <i data-lucide="user-plus" class="w-6 h-6 text-[#2563EB]"></i>
+          </div>
+          <p class="text-4xl md:text-5xl font-extrabold text-white mb-2">48<span class="text-[#2563EB]">+</span></p>
+          <p class="text-xs text-white/50 font-medium uppercase tracking-wider">Seguidos</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA SECTION ===================== -->
+  <section class="relative py-20 md:py-28 overflow-hidden bg-[#0D0D0D]">
+    <div class="relative z-10 mx-auto max-w-4xl px-6 text-center reveal">
+      <div class="bg-[#1F1F1F] border border-white/5 rounded-3xl p-10 md:p-16 relative overflow-hidden">
+        <div class="absolute -top-24 -left-24 w-48 h-48 bg-[#2563EB]/10 rounded-full blur-3xl pointer-events-none"></div>
+        
+        <h3 class="text-2xl md:text-4xl font-extrabold text-white mb-4">¿Quieres un proyecto como estos?</h3>
+        <p class="text-white/50 max-w-lg mx-auto text-sm md:text-base mb-8">Hablemos de tus requerimientos y diseñemos una plataforma web de alto impacto para tu marca o negocio.</p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/contacto" class="btn-shine bg-[#2563EB] hover:bg-blue-700 text-white font-semibold px-8 py-3.5 rounded-xl transition-all duration-300 shadow-lg shadow-blue-500/20 text-sm">
+            Iniciar Cotización
+          </a>
+          <a href="/servicios" class="border border-white/20 hover:border-white/40 text-white font-semibold px-8 py-3.5 rounded-xl transition-all duration-300 hover:bg-white/5 text-sm">
+            Ver Servicios
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* Header styling */
+  .hero-gradient {
+    background: linear-gradient(135deg, #0D0D0D 0%, #1F1F1F 40%, #0D0D0D 70%, #0a1628 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-gradient::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 30% 40%, rgba(37, 99, 235, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 70% 60%, rgba(37, 99, 235, 0.05) 0%, transparent 50%);
+    animation: subtle-pulse 8s ease-in-out infinite alternate;
+  }
+  @keyframes subtle-pulse {
+    0% { opacity: 0.5; transform: scale(1); }
+    100% { opacity: 1; transform: scale(1.05); }
+  }
+
+  /* Fade-in */
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+
+  /* Browser mockup style used dynamically by React component */
+  :global(.project-card) {
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  :global(.project-card:hover) {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px -15px rgba(37, 99, 235, 0.25), 0 0 40px -10px rgba(37, 99, 235, 0.1);
+  }
+  :global(.pattern-overlay) {
+    position: relative;
+    overflow: hidden;
+  }
+  :global(.pattern-overlay::after) {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.06;
+    background-image: 
+      radial-gradient(circle at 25% 25%, #2563EB 1px, transparent 1px),
+      radial-gradient(circle at 75% 75%, #2563EB 1px, transparent 1px);
+    background-size: 30px 30px;
+    transition: opacity 0.4s ease;
+  }
+  :global(.project-card:hover .pattern-overlay::after) {
+    opacity: 0.12;
+  }
+
+  :global(.project-img-1) {
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 40%, #1a1a2e 100%);
+  }
+  :global(.project-img-2) {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  }
+  :global(.project-img-3) {
+    background: linear-gradient(135deg, #0a1628 0%, #1b2838 40%, #2563EB20 100%);
+  }
+  :global(.project-img-4) {
+    background: linear-gradient(135deg, #111827 0%, #1f2937 50%, #1e293b 100%);
+  }
+</style>
+
+<script is:inline>
+  function initReveal() {
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    reveals.forEach(el => observer.observe(el));
+  }
+  initReveal();
+  document.addEventListener('astro:page-load', initReveal);
+</script>

@@ -1,0 +1,189 @@
+---
+import Layout from '../layouts/Layout.astro';
+import InteractiveBocetosShowcase from '../components/InteractiveBocetosShowcase.jsx';
+import PricingCalculator from '../components/PricingCalculator.jsx';
+---
+
+<Layout 
+  title="Bocetos Interactivos & Precios | Vision Web"
+  description="Explora e interactúa en vivo con bocetos funcionales de Landing Pages, Sitios Multisección y Tiendas Online (E-commerce). Descubre nuestros planes accesibles en COP."
+>
+  <!-- ===================== HERO SECTION ===================== -->
+  <section class="relative py-20 md:py-28 bg-gradient-to-b from-[#0D0D0D] via-[#141414] to-[#0D0D0D] overflow-hidden">
+    <!-- Glowing background elements -->
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#2563EB]/10 rounded-full blur-[140px] pointer-events-none"></div>
+    <div class="absolute inset-0 grid-pattern opacity-40"></div>
+
+    <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#2563EB]/15 border border-[#2563EB]/40 text-[#2563EB] text-xs sm:text-sm font-extrabold uppercase tracking-wider mb-6 animate-pulse">
+        ✨ Demostración Interactiva en Vivo
+      </div>
+
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-black text-white tracking-tight mb-6 leading-tight">
+        Explora nuestros <span class="text-[#2563EB] relative inline-block">Bocetos Web
+          <svg class="absolute -bottom-2 left-0 w-full h-3 text-[#2563EB]/40" viewBox="0 0 100 20" preserveAspectRatio="none">
+            <path d="M0,15 Q50,5 100,15" stroke="currentColor" stroke-width="4" fill="none" />
+          </svg>
+        </span>
+      </h1>
+
+      <p class="text-white/60 text-base sm:text-xl max-w-3xl mx-auto leading-relaxed mb-10">
+        Prueba antes de contratar. Interactúa directamente con las funcionalidades reales de cada tipo de desarrollo (*Landing Page*, *Web Multisección* y *Tienda Online*) y descubre nuestras tarifas accesibles desde <span class="text-white font-bold">$150.000 COP/mes</span>.
+      </p>
+
+      {/* Quick Jump Buttons */}
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="#demostrador" class="bg-[#2563EB] hover:bg-blue-600 text-white font-extrabold px-8 py-4 rounded-2xl shadow-xl shadow-blue-500/25 transition-all duration-300 hover:scale-105 flex items-center gap-2 text-sm btn-shine">
+          <span>🖥️ Probar Bocetos Interactivos</span>
+        </a>
+        <a href="#cotizador-medida" class="bg-[#1F1F1F] hover:bg-white/10 text-white border border-white/15 font-bold px-8 py-4 rounded-2xl transition-all duration-300 text-sm flex items-center gap-2">
+          <span>🧮 Cotizador a Medida</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== INTERACTIVE WIREFRAME SHOWCASE SECTION ===================== -->
+  <section id="demostrador" class="relative py-16 md:py-24 bg-[#0A0A0A] border-y border-white/5">
+    <InteractiveBocetosShowcase client:load />
+  </section>
+
+  <!-- ===================== FEATURE COMPARISON TABLE ===================== -->
+  <section class="relative py-24 bg-[#0D0D0D]">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-[#2563EB] text-xs font-bold uppercase tracking-widest block mb-2">Comparativa Transparente</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white">¿Qué incluye cada desarrollo?</h2>
+        <p class="text-white/50 text-sm mt-2">Compara de un vistazo todas las características de cada uno de nuestros paquetes.</p>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse min-w-[700px]">
+          <thead>
+            <tr class="border-b border-white/10 text-white font-extrabold text-sm bg-[#141414]">
+              <th class="p-4 rounded-tl-2xl">Característica / Funcionalidad</th>
+              <th class="p-4 text-center text-[#2563EB]">Landing Page</th>
+              <th class="p-4 text-center text-white">Web Multisección</th>
+              <th class="p-4 text-center text-indigo-400 rounded-tr-2xl">E-commerce</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-white/5 text-xs text-white/70">
+            <tr class="hover:bg-white/[0.02]">
+              <td class="p-4 font-semibold text-white">Tarifa Mensual (Con Mantenimiento)</td>
+              <td class="p-4 text-center font-bold text-green-400">$150.000 COP/mes</td>
+              <td class="p-4 text-center font-bold text-green-400">$260.000 COP/mes</td>
+              <td class="p-4 text-center font-bold text-green-400">$390.000 COP/mes</td>
+            </tr>
+            <tr class="hover:bg-white/[0.02]">
+              <td class="p-4 font-semibold text-white">Tarifa Pago Único (Propiedad Total)</td>
+              <td class="p-4 text-center font-bold">$490.000 COP</td>
+              <td class="p-4 text-center font-bold">$890.000 COP</td>
+              <td class="p-4 text-center font-bold">$1.490.000 COP</td>
+            </tr>
+            <tr class="hover:bg-white/[0.02]">
+              <td class="p-4 font-semibold text-white">Estructura & Páginas</td>
+              <td class="p-4 text-center">1 Página estratégica</td>
+              <td class="p-4 text-center">Hasta 5 Secciones</td>
+              <td class="p-4 text-center">Ilimitadas + Tienda</td>
+            </tr>
+            <tr class="hover:bg-white/[0.02]">
+              <td class="p-4 font-semibold text-white">Diseño 100% Adaptable a Móvil</td>
+              <td class="p-4 text-center text-green-400 font-bold">✓ Sí</td>
+              <td class="p-4 text-center text-green-400 font-bold">✓ Sí</td>
+              <td class="p-4 text-center text-green-400 font-bold">✓ Sí</td>
+            </tr>
+            <tr class="hover:bg-white/[0.02]">
+              <td class="p-4 font-semibold text-white">Formulario de Contacto + WhatsApp</td>
+              <td class="p-4 text-center text-green-400 font-bold">✓ Sí</td>
+              <td class="p-4 text-center text-green-400 font-bold">✓ Sí</td>
+              <td class="p-4 text-center text-green-400 font-bold">✓ Sí</td>
+            </tr>
+            <tr class="hover:bg-white/[0.02]">
+              <td class="p-4 font-semibold text-white">Catálogo de Productos & Carrito</td>
+              <td class="p-4 text-center text-white/30">− No</td>
+              <td class="p-4 text-center text-white/30">− No</td>
+              <td class="p-4 text-center text-green-400 font-bold">✓ Sí</td>
+            </tr>
+            <tr class="hover:bg-white/[0.02]">
+              <td class="p-4 font-semibold text-white">Pasarela de Pago (Wompi, Bold, PSE)</td>
+              <td class="p-4 text-center text-white/30">− No</td>
+              <td class="p-4 text-center text-white/30">− No</td>
+              <td class="p-4 text-center text-green-400 font-bold">✓ Sí</td>
+            </tr>
+            <tr class="hover:bg-white/[0.02]">
+              <td class="p-4 font-semibold text-white">Hosting Veloz + Certificado SSL</td>
+              <td class="p-4 text-center text-green-400 font-bold">✓ Incluido</td>
+              <td class="p-4 text-center text-green-400 font-bold">✓ Incluido</td>
+              <td class="p-4 text-center text-green-400 font-bold">✓ Incluido</td>
+            </tr>
+            <tr class="hover:bg-white/[0.02]">
+              <td class="p-4 font-semibold text-white">Mantenimiento & Respaldos Continuos</td>
+              <td class="p-4 text-center text-green-400 font-bold">✓ En plan mensual</td>
+              <td class="p-4 text-center text-green-400 font-bold">✓ En plan mensual</td>
+              <td class="p-4 text-center text-green-400 font-bold">✓ En plan mensual</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PRICING CALCULATOR CUSTOM ===================== -->
+  <section id="cotizador-medida" class="relative py-24 bg-[#141414] border-t border-white/5">
+    <div class="max-w-6xl mx-auto px-6">
+      <PricingCalculator client:load />
+    </div>
+  </section>
+
+  <!-- ===================== FAQ SECTION ===================== -->
+  <section class="relative py-24 bg-[#0D0D0D]">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <span class="text-[#2563EB] text-xs font-bold uppercase tracking-widest block mb-2">Preguntas Frecuentes</span>
+        <h2 class="text-3xl font-extrabold text-white">Dudas sobre Modalidades y Mantenimiento</h2>
+      </div>
+
+      <div class="space-y-4">
+        <div class="bg-[#141414] p-6 rounded-2xl border border-white/5">
+          <h4 class="font-bold text-base text-white mb-2">¿Cómo funciona la modalidad de Suscripción Mensual?</h4>
+          <p class="text-white/60 text-xs sm:text-sm leading-relaxed">
+            Inicias tu sitio web desde solo <strong class="text-white">$150.000 COP/mes</strong>. Esta cuota incluye el desarrollo de tu sitio, el hosting de alta velocidad, el dominio, el certificado SSL de seguridad y mantenimiento continuo (actualizaciones de texto, imágenes, monitoreo 24/7 y respaldos).
+          </p>
+        </div>
+
+        <div class="bg-[#141414] p-6 rounded-2xl border border-white/5">
+          <h4 class="font-bold text-base text-white mb-2">¿Qué incluye el mantenimiento mes a mes?</h4>
+          <p class="text-white/60 text-xs sm:text-sm leading-relaxed">
+            Nos encargamos de que tu página siempre esté activa, segura y actualizada. Puedes solicitarnos cambios en imágenes, nuevos textos, ajustes en precios o actualización de productos sin costo adicional.
+          </p>
+        </div>
+
+        <div class="bg-[#141414] p-6 rounded-2xl border border-white/5">
+          <h4 class="font-bold text-base text-white mb-2">¿Cuál es la diferencia con el Pago Único?</h4>
+          <p class="text-white/60 text-xs sm:text-sm leading-relaxed">
+            Si prefieres no pagar mensualidades, puedes optar por el Pago Único (ej. $490.000 COP para Landing Page). Realizas un solo pago por el desarrollo completo y la propiedad total del código.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA SECTION ===================== -->
+  <section class="relative py-24 bg-gradient-to-r from-blue-900/40 via-[#0D0D0D] to-indigo-900/40 border-t border-white/10 text-center">
+    <div class="max-w-3xl mx-auto px-6 space-y-6">
+      <h2 class="text-3xl sm:text-5xl font-black text-white">¿Listo para hacer realidad tu página web?</h2>
+      <p class="text-white/60 text-sm sm:text-base">
+        Contáctanos ahora y comenzamos hoy mismo con la configuración de tu proyecto.
+      </p>
+      <a
+        href="https://wa.me/573052311490?text=Hola%20Vision%20Web!%20%F0%9F%9F%A2%20Quiero%20iniciar%20mi%20proyecto%20web."
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-3 bg-[#2563EB] hover:bg-blue-600 text-white font-extrabold px-10 py-5 rounded-2xl shadow-2xl shadow-blue-500/30 transition-all text-base btn-shine"
+      >
+        <span>Hablar por WhatsApp Ahora</span>
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+      </a>
+    </div>
+  </section>
+</Layout>

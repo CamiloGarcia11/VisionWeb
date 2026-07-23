@@ -1,0 +1,248 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PricingCalculator from '../components/PricingCalculator.jsx';
+import InteractiveBocetosShowcase from '../components/InteractiveBocetosShowcase.jsx';
+---
+
+<Layout title="Servicios | Vision Web" description="Servicios de diseño web profesional, desarrollo a medida y estrategia digital. En Vision Web creamos páginas web que conectan tu negocio con el mundo.">
+  <!-- ===================== PAGE HEADER ===================== -->
+  <section class="hero-gradient py-20 md:py-28 relative overflow-hidden">
+    <div class="absolute inset-0 dot-pattern opacity-30"></div>
+    
+    <div class="relative z-10 mx-auto max-w-6xl px-6 text-center animate-fade-in-up">
+      <h1 class="text-4xl md:text-6xl font-black text-white tracking-tight mb-6">
+        Nuestros <span class="text-[#2563EB]">Servicios</span>
+      </h1>
+      <p class="text-white/50 max-w-2xl mx-auto text-base md:text-lg">
+        Soluciones digitales diseñadas a la medida de tus necesidades para hacer crecer tu presencia online.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===================== MAIN SERVICES ===================== -->
+  <section class="relative py-20 bg-[#0D0D0D]">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Service 1 - Diseño Web -->
+        <div class="service-card bg-[#1F1F1F] rounded-2xl p-8 border border-white/5 reveal relative flex flex-col justify-between min-h-[400px] h-full">
+          <div class="absolute top-0 left-0 right-0 h-1.5 bg-[#2563EB] rounded-t-2xl opacity-0 transition-opacity duration-300"></div>
+          <div>
+            <div class="w-14 h-14 rounded-xl bg-[#2563EB]/10 flex items-center justify-center mb-6">
+              <i data-lucide="palette" class="w-7 h-7 text-[#2563EB]"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-4">Diseño Web Profesional</h3>
+            <p class="text-white/50 text-sm leading-relaxed mb-6">Creamos diseños modernos, responsivos y atractivos que reflejan la identidad de tu marca. Cada píxel está pensado para convertir visitantes en clientes.</p>
+          </div>
+          <ul class="space-y-2 text-xs text-white/40 border-t border-white/5 pt-4">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-[#2563EB]"></i> Diseño Responsive Adaptable</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-[#2563EB]"></i> Interfaz de Usuario (UI/UX) Premium</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-[#2563EB]"></i> Identidad Visual Consistente</li>
+          </ul>
+        </div>
+
+        <!-- Service 2 - Desarrollo Web -->
+        <div class="service-card bg-[#1F1F1F] rounded-2xl p-8 border border-white/5 reveal relative flex flex-col justify-between min-h-[400px] h-full" style="transition-delay: 0.1s;">
+          <div class="absolute top-0 left-0 right-0 h-1.5 bg-[#2563EB] rounded-t-2xl opacity-0 transition-opacity duration-300"></div>
+          <div>
+            <div class="w-14 h-14 rounded-xl bg-[#2563EB]/10 flex items-center justify-center mb-6">
+              <i data-lucide="code-2" class="w-7 h-7 text-[#2563EB]"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-4">Desarrollo Web a Medida</h3>
+            <p class="text-white/50 text-sm leading-relaxed mb-6">Desarrollamos soluciones web personalizadas utilizando tecnologías modernas. Código rápido, escalable y optimizado para una experiencia veloz.</p>
+          </div>
+          <ul class="space-y-2 text-xs text-white/40 border-t border-white/5 pt-4">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-[#2563EB]"></i> Frontend en React/Next.js/Astro</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-[#2563EB]"></i> Optimización de Carga Veloz</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-[#2563EB]"></i> Integración de APIs y Sistemas</li>
+          </ul>
+        </div>
+
+        <!-- Service 3 - Estrategia Digital -->
+        <div class="service-card bg-[#1F1F1F] rounded-2xl p-8 border border-white/5 reveal relative flex flex-col justify-between min-h-[400px] h-full" style="transition-delay: 0.2s;">
+          <div class="absolute top-0 left-0 right-0 h-1.5 bg-[#2563EB] rounded-t-2xl opacity-0 transition-opacity duration-300"></div>
+          <div>
+            <div class="w-14 h-14 rounded-xl bg-[#2563EB]/10 flex items-center justify-center mb-6">
+              <i data-lucide="trending-up" class="w-7 h-7 text-[#2563EB]"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-4">Estrategia Digital</h3>
+            <p class="text-white/50 text-sm leading-relaxed mb-6">Más que código, creamos conexiones. Definimos la estrategia de posicionamiento SEO, analítica y visibilidad que tu negocio necesita en la red.</p>
+          </div>
+          <ul class="space-y-2 text-xs text-white/40 border-t border-white/5 pt-4">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-[#2563EB]"></i> SEO y Posicionamiento en Google</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-[#2563EB]"></i> Analítica y Métricas Web</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-[#2563EB]"></i> Copywriting y Contenido Estratégico</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== BOCETOS INTERACTIVOS & PRECIOS ===================== -->
+  <section class="relative py-24 bg-[#0A0A0A] overflow-hidden" id="bocetos">
+    <div class="absolute inset-0 grid-pattern opacity-40"></div>
+    <InteractiveBocetosShowcase client:load />
+  </section>
+
+  <!-- ===================== PROCESS SECTION ===================== -->
+  <section class="relative py-20 bg-[#1F1F1F]">
+    <div class="absolute inset-0 grid-pattern opacity-30"></div>
+    <div class="relative z-10 mx-auto max-w-6xl px-6">
+      <div class="text-center mb-16 reveal">
+        <h2 class="text-3xl md:text-5xl font-bold text-white">¿Cómo trabajamos?</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 relative reveal">
+        <!-- Step 1 -->
+        <div class="bg-[#0D0D0D]/60 border border-white/5 rounded-2xl p-6 text-center process-line">
+          <div class="w-10 h-10 rounded-full bg-[#2563EB] flex items-center justify-center text-white font-bold mx-auto mb-4">1</div>
+          <h4 class="font-bold text-white mb-2">Estrategia</h4>
+          <p class="text-white/40 text-xs leading-relaxed">Entendemos tu modelo de negocio y definimos el alcance y objetivos del proyecto.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="bg-[#0D0D0D]/60 border border-white/5 rounded-2xl p-6 text-center process-line">
+          <div class="w-10 h-10 rounded-full bg-[#2563EB] flex items-center justify-center text-white font-bold mx-auto mb-4">2</div>
+          <h4 class="font-bold text-white mb-2">Diseño</h4>
+          <p class="text-white/40 text-xs leading-relaxed">Creamos wireframes y mockups visuales para definir la interfaz interactiva.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="bg-[#0D0D0D]/60 border border-white/5 rounded-2xl p-6 text-center process-line">
+          <div class="w-10 h-10 rounded-full bg-[#2563EB] flex items-center justify-center text-white font-bold mx-auto mb-4">3</div>
+          <h4 class="font-bold text-white mb-2">Desarrollo</h4>
+          <p class="text-white/40 text-xs leading-relaxed">Escribimos código limpio y optimizado integrando React y buenas prácticas.</p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="bg-[#0D0D0D]/60 border border-white/5 rounded-2xl p-6 text-center">
+          <div class="w-10 h-10 rounded-full bg-[#2563EB] flex items-center justify-center text-white font-bold mx-auto mb-4">4</div>
+          <h4 class="font-bold text-white mb-2">Lanzamiento</h4>
+          <p class="text-white/40 text-xs leading-relaxed">Desplegamos en entornos optimizados y listos para recibir a tus clientes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== INTERACTIVE CALCULATOR ===================== -->
+  <section class="relative py-24 bg-[#0D0D0D] overflow-hidden" id="cotizador">
+    <div class="absolute inset-0 dot-pattern opacity-30"></div>
+    <div class="relative z-10 mx-auto max-w-6xl px-6">
+      <PricingCalculator client:load />
+    </div>
+  </section>
+
+  <!-- ===================== 3 THINGS WEB MUST HAVE ===================== -->
+  <section class="relative py-20 bg-[#1F1F1F]">
+    <div class="mx-auto max-w-5xl px-6 text-center reveal">
+      <h3 class="text-2xl md:text-3xl font-extrabold text-white mb-10">3 Cosas que tu página web DEBE tener:</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-[#0D0D0D] border border-white/5 p-6 rounded-2xl text-center">
+          <div class="w-10 h-10 rounded-lg bg-[#2563EB]/15 flex items-center justify-center mx-auto mb-4">
+            <i data-lucide="palette" class="w-5 h-5 text-[#2563EB]"></i>
+          </div>
+          <h4 class="font-bold text-sm text-white mb-2">Diseño Profesional</h4>
+          <p class="text-white/45 text-xs leading-relaxed">Una interfaz que proyecta credibilidad y engancha visualmente a tus visitas.</p>
+        </div>
+
+        <div class="bg-[#0D0D0D] border border-white/5 p-6 rounded-2xl text-center">
+          <div class="w-10 h-10 rounded-lg bg-[#2563EB]/15 flex items-center justify-center mx-auto mb-4">
+            <i data-lucide="zap" class="w-5 h-5 text-[#2563EB]"></i>
+          </div>
+          <h4 class="font-bold text-sm text-white mb-2">Rápida y Optimizada</h4>
+          <p class="text-white/45 text-xs leading-relaxed">Tiempos de carga mínimos para evitar que el usuario se marche a la competencia.</p>
+        </div>
+
+        <div class="bg-[#0D0D0D] border border-white/5 p-6 rounded-2xl text-center">
+          <div class="w-10 h-10 rounded-lg bg-[#2563EB]/15 flex items-center justify-center mx-auto mb-4">
+            <i data-lucide="target" class="w-5 h-5 text-[#2563EB]"></i>
+          </div>
+          <h4 class="font-bold text-sm text-white mb-2">Enfocada en Convertir</h4>
+          <p class="text-white/45 text-xs leading-relaxed">Llamados a la acción estratégicos diseñados para capturar contactos reales.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* Header styling */
+  .hero-gradient {
+    background: linear-gradient(135deg, #0D0D0D 0%, #1F1F1F 40%, #0D0D0D 70%, #0a1628 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-gradient::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 30% 40%, rgba(37, 99, 235, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 70% 60%, rgba(37, 99, 235, 0.05) 0%, transparent 50%);
+    animation: subtle-pulse 8s ease-in-out infinite alternate;
+  }
+  @keyframes subtle-pulse {
+    0% { opacity: 0.5; transform: scale(1); }
+    100% { opacity: 1; transform: scale(1.05); }
+  }
+
+  /* Service Card Hover styles */
+  .service-card {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px rgba(37, 99, 235, 0.15), 0 0 0 1px rgba(37, 99, 235, 0.3);
+  }
+  .service-card:hover div.absolute {
+    opacity: 1;
+  }
+
+  /* Process connection line */
+  .process-line {
+    position: relative;
+  }
+  .process-line::after {
+    content: '';
+    position: absolute;
+    top: 36px;
+    right: -1.75rem;
+    width: 3.5rem;
+    height: 2px;
+    background: linear-gradient(90deg, #2563EB, transparent);
+    z-index: 5;
+  }
+  @media (max-width: 768px) {
+    .process-line::after { display: none; }
+  }
+
+
+  /* Fade-in */
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+
+<script is:inline>
+  function initReveal() {
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    reveals.forEach(el => observer.observe(el));
+  }
+  initReveal();
+  document.addEventListener('astro:page-load', initReveal);
+</script>

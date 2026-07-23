@@ -1,0 +1,313 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+  const projects = [
+    {
+      slug: 'crave-detail-co',
+      title: 'Crave Detail Co',
+      tagline: 'Estética Automotriz y Detallado Profesional',
+      description: 'Sitio web premium para servicios de estética automotriz y detallado profesional. Cuenta con un diseño dinámico, galería de servicios y optimización de conversión.',
+      challenge: 'El cliente necesitaba una presencia digital impactante que reflejara la alta calidad de su servicio de detallado automotriz. La experiencia de usuario debía ser sofisticada y facilitar la reserva o cotización directa de paquetes de estética de vehículos premium.',
+      solution: 'Diseñamos una landing page estética de alto nivel con un fondo oscuro y acentos metálicos, emulando la sofisticación de autos deportivos. Estructuramos una sección interactiva para ver los diferentes paquetes de detallado, optimizamos las imágenes de alta definición y simplificamos los flujos de contacto.',
+      features: [
+        'Diseño visual de alto impacto adaptado a la marca.',
+        'Galería de servicios interactiva con filtros de categorías.',
+        'Optimización extrema de imágenes para una velocidad de carga óptima.',
+        'Llamados a la acción estratégicos orientados a agendar citas.'
+      ],
+      tags: ['Detailing', 'Tailwind CSS', 'Aesthetic', 'UI/UX', 'SEO'],
+      link: 'https://cravedetailco.netlify.app/',
+      isPrivate: false,
+      icon: '✨',
+      image: '/assets/projects/crave.png',
+      imgClass: 'project-img-1'
+    },
+    {
+      slug: 'cafiitechstore',
+      title: 'Cafii Tech Store',
+      tagline: 'Tienda Virtual de Tecnología y Hardware',
+      description: 'Tienda virtual de tecnología y hardware de alto rendimiento. Interfaz intuitiva y moderna para catálogo de productos.',
+      challenge: 'Crear un e-commerce veloz y altamente visual para la venta de componentes informáticos, periféricos y hardware de alto rendimiento, asegurando que el catálogo fuera fácil de filtrar y los productos destacaran visualmente.',
+      solution: 'Desarrollamos una interfaz moderna basada en componentes React. Optimizamos la visualización del inventario y la navegación del catálogo de hardware mediante filtros rápidos de categorías, garantizando una carga instantánea y una experiencia de compra fluida.',
+      features: [
+        'E-commerce intuitivo enfocado en la conversión.',
+        'Filtro de productos en tiempo real mediante estados de React.',
+        'Catálogo visual optimizado con cargas perezosas (lazy-loading).',
+        'Diseño responsive adaptado a cualquier tamaño de pantalla.'
+      ],
+      tags: ['E-commerce', 'React/Next.js', 'UI/UX', 'Catalogo', 'Hardware'],
+      link: 'https://cafiitechstore.vercel.app/',
+      isPrivate: false,
+      icon: '🛒',
+      image: '/assets/projects/cafii.png',
+      imgClass: 'project-img-2'
+    },
+    {
+      slug: 'nova-erp',
+      title: 'Nova ERP',
+      tagline: 'Sistema de Planificación de Recursos Empresariales',
+      description: 'Sistema de planificación de recursos empresariales (ERP) robusto para la administración y automatización de procesos internos, control de inventario e informes en tiempo real.',
+      challenge: 'Las empresas clientes requerían un panel administrativo unificado para gestionar stock, ventas y usuarios en tiempo real, evitando retrasos en la carga de datos masivos y asegurando una interfaz organizada y segura.',
+      solution: 'Implementamos un panel SaaS robusto con Next.js y Tailwind CSS. Diseñamos componentes interactivos para la visualización de gráficos estadísticos de ventas, tablas de inventario paginadas e integraciones de roles y seguridad a nivel de vistas.',
+      features: [
+        'Panel de administración robusto con interfaz intuitiva.',
+        'Gráficos y reportes de inventario actualizados en tiempo real.',
+        'Lógica de negocio avanzada con roles de usuario configurables.',
+        'Diseño de tablas dinámicas con filtros de búsqueda instantáneos.'
+      ],
+      tags: ['SaaS', 'Next.js', 'Panel Admin', 'Logica de Negocio', 'Base de Datos'],
+      link: 'https://novaerp-iota.vercel.app/login',
+      isPrivate: false,
+      icon: '⚙️',
+      image: '/assets/projects/nova.png',
+      imgClass: 'project-img-3'
+    },
+    {
+      slug: 'gobernacion-boyaca',
+      title: 'Gestión Documental - Gobernación de Boyacá',
+      tagline: 'Plataforma de Gestión Documental y Talento Humano',
+      description: 'Plataforma institucional para la unificación, gestión y consulta en tiempo real del talento humano y documentos de la Gobernación de Boyacá.',
+      challenge: 'La gobernación presentaba retrasos en la consulta y centralización de la información administrativa de su personal e historial de contratos territoriales. El sistema debía ser altamente seguro y cumplir con los estándares institucionales.',
+      solution: 'Estructuramos una aplicación modular organizada desde cero con bases de datos relacionales robustas. Diseñamos un flujo ágil de búsqueda de servidores públicos, gestión de hojas de vida e historial de contratación regional con acceso controlado.',
+      features: [
+        'Unificación y centralización del talento humano gubernamental.',
+        'Lógica modular con separación estricta de responsabilidades.',
+        'Seguridad de la información con encriptación de datos sensibles.',
+        'Optimización de consultas complejas para reportes inmediatos.'
+      ],
+      tags: ['Gubernamental', 'Seguridad', 'Base de Datos', 'Gestion Documental', 'Boyacá'],
+      link: '#',
+      isPrivate: true,
+      icon: '📄',
+      image: null,
+      imgClass: 'project-img-4'
+    },
+    {
+      slug: 'sus-finanzas',
+      title: 'Sus Finanzas',
+      tagline: 'Asesoría Financiera y Vivienda - Williams Cruz',
+      description: 'Plataforma web para asesoría financiera e hipotecaria. Integra un simulador interactivo de ahorro y cotizaciones de crédito de vivienda en tiempo real.',
+      challenge: 'El cliente requería una plataforma web confiable e informativa para expandir su presencia como asesor financiero hipotecario, proporcionando herramientas interactivas para simular ahorros en créditos de vivienda y agendar estudios financieros gratuitos.',
+      solution: 'Desarrollamos una landing page premium con un diseño limpio en tonos azulados y blancos que proyecta profesionalismo y credibilidad. Añadimos secciones estructuradas de servicios, testimonios, e implementamos componentes interactivos de simulación de ahorros hipotecarios.',
+      features: [
+        'Diseño limpio, confiable y corporativo de alta conversión.',
+        'Simulador hipotecario interactivo de ahorros en tiempo real.',
+        'Flujos optimizados para el agendamiento de asesorías gratuitas.',
+        'Integración móvil directa con WhatsApp y canales de soporte.'
+      ],
+      tags: ['Finanzas', 'Simulador', 'Astro', 'UI/UX', 'SEO'],
+      link: 'https://williamscruzco.vercel.app/',
+      isPrivate: false,
+      icon: '📊',
+      image: '/assets/projects/susfinanzas.png',
+      imgClass: 'project-img-5'
+    }
+  ];
+
+  return projects.map((project) => ({
+    params: { slug: project.slug },
+    props: { project }
+  }));
+}
+
+const { project } = Astro.props;
+---
+
+<Layout title={`${project.title} | Vision Web`} description={project.description}>
+  <!-- ==================== HEADER ==================== -->
+  <section class="hero-gradient py-20 md:py-24 relative overflow-hidden">
+    <div class="absolute inset-0 dot-pattern opacity-30"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    
+    <div class="relative z-10 mx-auto max-w-5xl px-6 animate-fade-in-up">
+      <a href="/proyectos" class="inline-flex items-center gap-2 text-[#2563EB] hover:text-blue-400 font-semibold mb-6 transition-colors group">
+        <i data-lucide="arrow-left" class="w-4 h-4 transition-transform group-hover:-translate-x-1"></i>
+        Volver a proyectos
+      </a>
+      
+      <h1 class="text-4xl md:text-6xl font-black text-white tracking-tight mb-4">
+        {project.title}
+      </h1>
+      
+      <p class="text-white/60 text-lg md:text-xl font-light tracking-wide max-w-2xl">
+        {project.tagline}
+      </p>
+    </div>
+  </section>
+
+  <!-- ==================== CONTENT ==================== -->
+  <section class="relative py-20 bg-[#0D0D0D]">
+    <div class="mx-auto max-w-5xl px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        
+        {/* Left Column: Case Study Details */}
+        <div class="lg:col-span-8 space-y-10 reveal">
+          {/* Browser Mockup Screenshot */}
+          {project.image && (
+            <div class="glass-card rounded-2xl overflow-hidden border border-white/5 shadow-2xl mb-8">
+              {/* Browser Bar */}
+              <div class="flex items-center justify-between px-4 py-3 bg-[#1F1F1F]/60 border-b border-white/5">
+                <div class="flex items-center gap-1.5">
+                  <div class="w-2.5 h-2.5 rounded-full bg-red-400/60"></div>
+                  <div class="w-2.5 h-2.5 rounded-full bg-yellow-400/60"></div>
+                  <div class="w-2.5 h-2.5 rounded-full bg-green-400/60"></div>
+                </div>
+                <div class="bg-black/30 border border-white/5 px-4 py-0.5 rounded text-xs text-white/40 truncate max-w-sm font-mono">
+                  {project.link.replace('https://', '')}
+                </div>
+                <div class="w-12"></div>
+              </div>
+              {/* Image */}
+              <div class="bg-[#1F1F1F]">
+                <img src={project.image} alt={project.title} class="w-full h-auto object-cover object-top max-h-[420px]" />
+              </div>
+            </div>
+          )}
+
+          {/* Challenge */}
+          <div class="space-y-4">
+            <h3 class="text-xl font-extrabold text-white flex items-center gap-2">
+              <i data-lucide="alert-circle" class="w-5 h-5 text-[#2563EB]"></i>
+              El Desafío
+            </h3>
+            <p class="text-white/55 text-sm md:text-base leading-relaxed">
+              {project.challenge}
+            </p>
+          </div>
+
+          {/* Solution */}
+          <div class="space-y-4">
+            <h3 class="text-xl font-extrabold text-white flex items-center gap-2">
+              <i data-lucide="check-circle" class="w-5 h-5 text-[#2563EB]"></i>
+              La Solución
+            </h3>
+            <p class="text-white/55 text-sm md:text-base leading-relaxed">
+              {project.solution}
+            </p>
+          </div>
+
+          {/* Features */}
+          <div class="space-y-4">
+            <h3 class="text-xl font-extrabold text-white flex items-center gap-2">
+              <i data-lucide="star" class="w-5 h-5 text-[#2563EB]"></i>
+              Logros & Características Clave
+            </h3>
+            <ul class="space-y-3 pl-1">
+              {project.features.map(feat => (
+                <li class="flex items-start gap-3 text-xs md:text-sm text-white/50">
+                  <i data-lucide="check" class="w-4 h-4 text-[#2563EB] shrink-0 mt-0.5"></i>
+                  <span>{feat}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        {/* Right Column: Sidebar Spec Card */}
+        <div class="lg:col-span-4 reveal" style="transition-delay: 0.1s;">
+          <div class="glass-card rounded-2xl p-6 border border-white/5 space-y-6">
+            <div>
+              <h4 class="text-xs font-bold text-white/40 uppercase tracking-wider mb-2">Categoría</h4>
+              <p class="text-sm font-semibold text-white">{project.tagline.split(' y ')[0]}</p>
+            </div>
+
+            <div>
+              <h4 class="text-xs font-bold text-white/40 uppercase tracking-wider mb-3">Tecnologías</h4>
+              <div class="flex flex-wrap gap-1.5">
+                {project.tags.map(tag => (
+                  <span class="text-[10px] font-medium px-2.5 py-1 rounded-full bg-white/5 text-white/40 border border-white/10">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div class="pt-4 border-t border-white/5">
+              {project.isPrivate ? (
+                <div class="space-y-3">
+                  <span class="w-full py-3.5 bg-white/5 text-white/40 text-xs font-bold rounded-xl flex items-center justify-center gap-2 cursor-not-allowed border border-white/5">
+                    <i data-lucide="lock" class="w-4 h-4"></i>
+                    Acceso Privado
+                  </span>
+                  <p class="text-[10px] text-white/30 text-center italic">Este proyecto contiene datos confidenciales y solo es accesible en la red de la Gobernación.</p>
+                </div>
+              ) : (
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-3.5 bg-[#2563EB] hover:bg-blue-700 text-white font-bold rounded-xl flex items-center justify-center gap-2 transition-all text-xs btn-shine"
+                >
+                  <i data-lucide="external-link" class="w-4 h-4"></i>
+                  Visitar Sitio Web
+                </a>
+              )}
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* Header styling */
+  .hero-gradient {
+    background: linear-gradient(135deg, #0D0D0D 0%, #1F1F1F 40%, #0D0D0D 70%, #0a1628 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-gradient::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 30% 40%, rgba(37, 99, 235, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 70% 60%, rgba(37, 99, 235, 0.05) 0%, transparent 50%);
+    animation: subtle-pulse 8s ease-in-out infinite alternate;
+  }
+  @keyframes subtle-pulse {
+    0% { opacity: 0.5; transform: scale(1); }
+    100% { opacity: 1; transform: scale(1.05); }
+  }
+
+  /* Glassmorphism */
+  .glass-card {
+    background: rgba(31, 31, 31, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  /* Fade-in */
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+</style>
+
+<script is:inline>
+  function initReveal() {
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    reveals.forEach(el => observer.observe(el));
+  }
+  initReveal();
+  document.addEventListener('astro:page-load', initReveal);
+</script>
